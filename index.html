@@ -49,7 +49,14 @@
 .distributor-panel .distributor-select-row .btn.primary{display:inline-flex;align-items:center;text-decoration:none}
 .distributor-panel .distributor-session-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px 14px;border-top:1px solid #2d303a}
 .distributor-panel .spec-note{display:block;padding:0 18px 10px;color:#a2a5b2}
-.distributor-panel .distributor-session-row .spec-note{padding:0}</style></head>
+.distributor-panel .distributor-session-row .spec-note{padding:0}/* Release status palette */
+.status.approved{--status-bg:#16352c;--status-fg:#7cddb3;--status-dot:#7cddb3}
+.status.review{--status-bg:#393126;--status-fg:#f1cc94;--status-dot:#f1cc94}
+.status.issue{--status-bg:#3b2529;--status-fg:#f19999;--status-dot:#e67b7b}
+.status.draft{--status-bg:#1e2e43;--status-fg:#8cb9f0;--status-dot:#8cb9f0}
+.status.approved,.status.review,.status.issue,.status.draft{background:var(--status-bg);color:var(--status-fg)}
+.status.approved i,.status.review i,.status.issue i,.status.draft i{background:var(--status-dot)}
+</style></head>
 <body><div class="shell">
 <aside class="side"><div class="brand"><span class="logo">◈</span>orbit <span class="tag">RELEASE OPS</span></div><div class="workspace"><span class="orgicon">N</span><span class="org"><b>Northstar Records</b><small>Workspace</small></span><span>⌄</span></div><div class="label">WORKSPACE</div><nav class="nav" id="nav"><button class="active" data-section="Overview"><span class="icon">▦</span>Overview</button><button data-section="Releases"><span class="icon">◉</span>Releases <span class="count">9</span></button><button data-section="Artists"><span class="icon">♙</span>Artists</button><button data-section="Tasks"><span class="icon">☷</span>Tasks <span class="count" id="tasksNavCount">9</span></button></nav><div class="label tools">TOOLS</div><nav class="nav"><button><span class="icon">⌘</span>Catalog health <span class="soon">SOON</span></button><button><span class="icon">⚙</span>Settings</button></nav><div class="bottom"><div class="help"><span class="bubble">?</span><span><b>Need a hand?</b><small>Visit the help center</small></span><span>›</span></div><div class="user"><span class="avatar">AM</span><div><b>Alex Morgan</b><small>Admin</small></div><span>⌄</span></div></div></aside>
 <main class="main"><header class="top"><div class="top-left"><button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse sidebar" aria-expanded="true" title="Collapse sidebar" onclick="toggleSidebar()">☰</button><div class="crumb">Northstar Records <span>›</span> <b id="crumb">Overview</b></div></div><div class="topright"><label class="search">⌕ <input id="search" placeholder="Search releases, artists…"><kbd>⌘ K</kbd></label><button class="bell" onclick="toast('You’re all caught up')">♧</button><span class="avatar">AM</span></div></header>
