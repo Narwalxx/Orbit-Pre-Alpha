@@ -1,0 +1,7 @@
+# Local operating-system files
+Thumbs.db
+Desktop.ini
+
+# Editor settings
+.vscode/
+.idea/
